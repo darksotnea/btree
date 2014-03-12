@@ -11,4 +11,10 @@ public interface IBTree <T extends Comparable<T>> {
     public AtomicInteger getCount();
 
     public void add(T value);
+
+    public interface Process<T> {
+        public void process(T value);
+    }
+
+    public void foreach(Process<T> process);
 }
